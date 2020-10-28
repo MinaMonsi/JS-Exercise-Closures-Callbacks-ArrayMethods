@@ -29,6 +29,7 @@ function processFirstItem(stringList, callback) {
  * Counter 1 is a higher order function that takes another function as an arguement.  It uses the data inside the function.  Counter2 is not a higher order function.  It retieves its data from outside the function.
  *
  * 2. Which of the two uses a closure? How can you tell?
+ * Counter1 uses closure.  The inner function has access to the variables and parameters of the outer function.
  *
  * 3. In what scenario would the counter1 code be preferable? In what scenario would counter2 be better?
  *
