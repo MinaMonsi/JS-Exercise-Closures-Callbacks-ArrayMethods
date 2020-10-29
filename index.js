@@ -26,12 +26,19 @@ function processFirstItem(stringList, callback) {
  * Study the code for counter1 and counter2. Answer the questions below.
  *
  * 1. What is the difference between counter1 and counter2?
- * Counter 1 is a higher order function that takes another function as an arguement.  It uses the data inside the function.  Counter2 is not a higher order function.  It retieves its data from outside the function.
+ * Counter1 is a higher order function that takes another function as an arguement.  It uses
+ * the data inside the function.  Counter2 is not a higher order function.  It retieves its
+ * data from outside the main function or counter1.
  *
  * 2. Which of the two uses a closure? How can you tell?
- * Counter1 uses closure.  The inner function has access to the variables and parameters of the outer function.
+ * Counter2 is the closure.  The inner function has access to the variables and parameters of
+ * the outer function.
  *
- * 3. In what scenario would the counter1 code be preferable? In what scenario would counter2 be better?
+ * Counter1 is the main function and counter2 draws out information from the main function
+ *
+ * 3. In what scenario would the counter1 code be preferable? In what scenario would counter2
+ * be better? Counter1 can be used throughout the rest of the program and counter2 does not
+ * affect the entire program.  Counter2 is used to access data from counter1.
  *
  */
 
@@ -56,8 +63,9 @@ function counter2() {
 
 Write a function called `inning` that generates a random number of points that a team scored in an inning. This should be a whole number between 0 and 2. */
 
-function inning(max) {
-return Math.floor(Math.random() * Math.floor(3));
+function inning() {
+  let score = Math.floor(3 * Math.random());
+  return score;
 }
 console.log(inning());
 
@@ -75,9 +83,22 @@ finalScore(inning, 9) might return:
 
 */
 
-function finalScore(inning, 9) {
-  /*Code Here*/
+function finalScore(scoreInnings, numInnings) {
+  let homeScore = 0;
+  let awayScore = 0;
+  for (i = 0; i < scoreInnings; i++) {
+    homeScore += numInnings();
+  }
+  for (i = 0; i < scoreInnings; i++) {
+    awayScore += numInnings();
+  }
+  return {
+    home: homeScore,
+    away: awayScore,
+  };
 }
+
+console.log(finalScore(9, inning));
 
 /* Task 4: 
 
