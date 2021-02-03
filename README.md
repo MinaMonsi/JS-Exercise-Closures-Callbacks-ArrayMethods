@@ -65,8 +65,11 @@ dansRoll();
 ```
 
 a. Where is closure used in this code? How can you tell?
+Closure was used when the function was created.
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
+The string remains the same, but the number generated is always different.
 c. What is the lexical scope of `newRoll`?
+'newRoll' has access to the variables in the parent function personalDice.
 
 ### Task 3 - Stretch Goals
 
