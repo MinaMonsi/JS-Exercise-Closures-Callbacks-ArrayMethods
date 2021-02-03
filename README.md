@@ -44,7 +44,7 @@ Find the file `index.js` and complete the tasks until your tests are passing.
 Edit the `ReadMe` file with your answers.
 
 1. In your own words, define closure (1-2 sentences).
-   Closure occurs with functions when they are created. Closures gives us access to an outer function's scope from an inner function.
+   Closure occurs when a function is nested inside a function. The inner function is the closure and has access to the variables created in the outer function.
 2. Study the following code, then answer the questions below.
 
 ```js
@@ -65,11 +65,11 @@ dansRoll();
 ```
 
 a. Where is closure used in this code? How can you tell?
-Closure was used when the function was created.
+Closure is used in the inner function.
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
 The string remains the same, but the number generated is always different.
 c. What is the lexical scope of `newRoll`?
-'newRoll' has access to the variables in the parent function personalDice.
+The lexical scope of 'newRoll' is the access it has to the variables in the parent function personalDice.
 
 ### Task 3 - Stretch Goals
 
